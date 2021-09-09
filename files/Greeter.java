@@ -5,7 +5,7 @@ public class Greeter {
 
   private Locale locale;
   private String name;
-  
+
   private String address;
 
   public Greeter(String language, String country, String name) {
@@ -15,7 +15,7 @@ public class Greeter {
 
   public String sayHello() {
     ResourceBundle messages = ResourceBundle.getBundle("MessagesBundle", locale);
-    return messages.getString("greeting") + ", " + name;
+    return messages.getString("greeting") + ", " + name.toUppercase();
   }
 
   public static void main(String[] args) {
